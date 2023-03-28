@@ -102,7 +102,7 @@
 <script>
 
 $(function(){
-$('#more-btn').on('click',function(){
+$('#more-btn>a').on('click',function(){
 $('.box:nth-of-type(n+9)').slideToggle(200);
 let txt = $(this).text();
 console.log(txt);

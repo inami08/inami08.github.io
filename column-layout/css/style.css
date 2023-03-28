@@ -66,7 +66,7 @@ h1{
     display: block;
   }
 /* ボタンのスニペット */
-#more-btn a {
+#more-btn>a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -80,7 +80,7 @@ h1{
   transition: 0.3s;
 }
 
-#more-btn a::after {
+#more-btn>a::after {
   content: '';
   width: 5px;
   height: 5px;
@@ -89,7 +89,7 @@ h1{
   transform: rotate(45deg);
 }
 
-#more-btn a:hover {
+#more-btn>a:hover {
   text-decoration: none;
   background-color: #bbbbbb;
 }
