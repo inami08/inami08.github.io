@@ -1,0 +1,98 @@
+$point_1:430px;
+$point_2:550px;
+$point_3:768px;
+$point_4:1050px;
+
+$font_sp_h2:16px;
+$font_sp_h3:20px;
+$font_sp_p:14px;
+
+$font_pc_h2:20px;
+$font_pc_h3:28px;
+$font_pc_p:18px;
+
+$color_1: #C7D4B6;
+$color_2: #845cb1;
+$color_3: #38B48B;
+$color_4: #52433D;
+$color_5: #DCDCDC;
+$color_txt: #333333;
+
+@mixin bp_sp{
+@media (min-width:$point_1){
+@content;
+}}
+@mixin bp_tab1{
+@media (min-width:$point_2){
+@content;
+}}
+@mixin bp_tab2{
+@media (min-width:$point_3){
+@content;
+}}
+@mixin bp_pc{
+@media (min-width:$point_4){
+@content;
+}}
+
+
+.policy-wrapper{
+width: 100%;
+margin: 0 auto;
+padding: 40px;
+@include bp_tab1(){
+  padding: 40px 120px;
+}
+  h1{
+    width: 260px;
+    font-size: 26px;
+    margin: 80px auto;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #333333;
+    @include bp_tab1(){
+      font-size: 34px;
+      width: 350px;
+      margin-bottom: 120px;
+    }
+  }
+  h2{
+    font-size: 20px;
+    margin-bottom: 40px;
+    @include bp_tab1(){
+      font-size: 26px;
+      margin-bottom: 60px;
+    }
+  }
+  p{
+    font-size: 14px;
+    line-height: 2.3;
+    margin-bottom: 80px;
+    @include bp_tab1(){
+      font-size: 18px;
+      margin-bottom: 130px;
+    }
+  }
+  a{
+    font-size: 14px;
+    display: block;
+    color: $color_4;
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    &:hover{
+      opacity: 0.5;
+    }
+    @include bp_tab1(){
+      font-size: 18px;
+    }
+  }
+  .totop{
+    margin-top: 100px;
+    margin-bottom: 30px;
+    @include bp_tab1(){
+      margin-bottom: 40px;
+    }
+  }
+  .close{
+    margin-bottom: 80px;
+  }
+}

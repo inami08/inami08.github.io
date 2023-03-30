@@ -1,0 +1,141 @@
+$point_1:430px;
+$point_2:550px;
+$point_3:768px;
+$point_4:1050px;
+
+$font_sp_h2:16px;
+$font_sp_h3:18px;
+$font_sp_p:14px;
+
+$font_pc_h2:20px;
+$font_pc_h3:26px;
+$font_pc_p:16px;
+
+$color_1: #C7D4B6;
+$color_2: #845cb1;
+$color_3: #38B48B;
+$color_4: #52433D;
+$color_5: #DCDCDC;
+$color_txt: #333333;
+
+@mixin bp_sp{
+@media (min-width:$point_1){
+@content;
+}}
+@mixin bp_tab1{
+@media (min-width:$point_2){
+@content;
+}}
+@mixin bp_tab2{
+@media (min-width:$point_3){
+@content;
+}}
+@mixin bp_pc{
+@media (min-width:$point_4){
+@content;
+}}
+
+
+.room-wrapper{
+    margin: 100px 0;
+    @include bp_pc(){
+        margin: 100px auto 200px;
+        margin-bottom: 150px 0;
+        max-width: 1260px;
+    }
+    .room-content{
+        margin-bottom: 10px;
+        @include bp_pc(){
+            display: flex;
+            align-items: center;
+            padding: 0 100px;
+            margin-bottom: 40px;
+        }
+        .room-img{
+            max-width: 600px;
+            margin: 0 auto;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .room-txt{
+            text-align: center;
+            padding: 20px;
+            @include bp_pc(){
+                padding: 50px;
+            }
+            h3{
+                width: 80px;
+                margin: 0 auto 30px;
+                font-size: 16px;
+                border-bottom: 1px solid #333;
+                @include bp_pc(){
+                    margin: 0 0 50px;
+                    font-size: 20px;
+                }
+            }
+            p{
+                font-size: 14px;
+                line-height: 1.5;
+                @include bp_pc(){
+                    text-align: left;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    .room-content.reverse{
+        flex-direction: row-reverse;
+    }
+    .aboutroom-container{
+        @include bp_pc(){
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        h3{
+            font-size: 16px;
+            margin-bottom: 10px;
+            @include bp_pc(){
+                font-size: 20px;
+            }
+        }
+        .aboutroom{
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 12px;
+            @include bp_pc(){
+                font-size: 16px;
+            }
+            dt{
+                width: 25%;
+                border-top: 1px solid #333;
+                padding: 10px 0 10px 10px;
+                @include bp_pc(){
+                    padding: 20px 0 20px 20px;
+                }
+            }
+            dd{
+                width: 25%;
+                padding: 10px 10px 10px 0;
+                border-top: 1px solid #333;
+                @include bp_pc(){
+                    padding: 20px 20px 20px 0;
+                }
+            }
+            .half-left{
+                width: 25%;
+                @include bp_pc(){
+                    padding: 50px 0 20px 20px;
+                }
+            }
+            .half-right{
+                width: 75%;
+                @include bp_pc(){
+                    padding: 50px 30px;
+                }
+            }
+        }
+    }
+}

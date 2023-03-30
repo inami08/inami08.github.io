@@ -1,0 +1,262 @@
+$point_1:430px;
+$point_2:550px;
+$point_3:768px;
+$point_4:1050px;
+
+$font_sp_h2:16px;
+$font_sp_h3:18px;
+$font_sp_p:14px;
+
+$font_pc_h2:20px;
+$font_pc_h3:26px;
+$font_pc_p:16px;
+
+$color_1: #C7D4B6;
+$color_2: #845cb1;
+$color_3: #38B48B;
+$color_4: #52433D;
+$color_5: #DCDCDC;
+$color_txt: #333333;
+
+@mixin bp_sp{
+@media (min-width:$point_1){
+@content;
+}}
+@mixin bp_tab1{
+@media (min-width:$point_2){
+@content;
+}}
+@mixin bp_tab2{
+@media (min-width:$point_3){
+@content;
+}}
+@mixin bp_pc{
+@media (min-width:$point_4){
+@content;
+}}
+
+
+.search-wrapper{
+    margin: 80px 0 100px;
+    padding: 0 10px;
+    @include bp_pc(){
+        max-width: 1260px;
+        margin: 80px auto 100px;
+    }
+    h2{
+        font-size: 20px;
+        margin-bottom: 20px;
+        @include bp_pc(){
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+    }
+    .search-bar{
+        height: 50px;
+        background-color: $color_4;
+        color: #fff;
+        text-align-last: left;
+        h3{
+            line-height: 50px;
+            padding-left: 20px;
+            font-size: 18px;
+            @include bp_pc(){
+                font-size: 24px;
+            }
+        }
+    }
+}
+.search-box{
+    background-color: $color_5;
+    form{
+        padding: 30px;
+        dl{
+            width: 90%;
+            margin: 0 auto;
+            @include bp_tab2(){
+                display: flex;
+                align-items: center;
+                border-bottom: #333 1px solid;
+                padding-top: 20px;
+            }
+            dt{
+                font-size: 18px;
+                margin-bottom: 10px;
+                padding-top: 15px;
+                border-top: #333 1px solid;
+                @include bp_tab1(){
+                    margin-bottom: 20px;
+                }
+                @include bp_tab2(){
+                    border-top: none;
+                }
+            }
+            .dt-restday{
+                border-top: none;
+                padding-top: 10px;
+            }
+            dd{
+                margin-bottom: 15px;
+                input{
+                    background-color: #fff;
+                    border: 1px solid #333;
+                }
+                select{
+                    width: 60px;
+                    margin-right: 5px;
+                    background-color: #fff;
+                    border: 1px solid #333;
+                }
+                #amount1,#amount2{
+                    width: 90px;
+                }
+            }
+            .foodradio-wrapper{
+                width: 80px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+            }
+            .flex-wrapper{
+            @include bp_tab1(){
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 280px;
+                    margin: 0 auto 20px;
+                }
+                @include bp_tab2(){
+                    margin-bottom: 0;
+                }
+            }
+        }
+        button{
+            padding: 20px;
+            margin: 20px 0;
+            font-size: $font_sp_h2;
+            background-color: $color_3;
+            color: #fff;
+            &:hover{
+                box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1) ;
+                border-color: transparent;            
+                opacity: 0.5;
+            }
+            @include bp_tab2(){
+                padding: 35px;
+                margin: 40px 0;
+                font-size: 20px;
+            }
+        }
+        }
+}
+.plan-wrapper{
+    @include bp_pc(){
+        max-width: 1260px;
+        margin: 0 auto;
+    }
+    h2{
+        font-size: 20px;
+        margin-bottom: 30px;
+        @include bp_pc(){
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+    }
+    .plan-list{
+        padding: 0 10px;
+        margin-bottom: 100px;
+        .plan-bar{
+            padding: 10px 10px;
+            color: #fff;
+            background-color: $color_4;
+            h3{
+                font-size: 16px;
+                @include bp_pc(){
+                    font-size: 24px;
+                    text-align: left;
+                    padding-left: 30px;
+                }
+            }
+        }
+        .plan-content{
+            background-color: $color_5;
+            padding: 40px;
+            @include bp_pc(){
+                .plan-txtpic{
+                    display: flex;
+                    align-items: center;
+                    padding: 0 50px;
+                }
+            }
+            .plan-txt{
+                @include bp_pc(){
+                    padding: 50px;
+                    width: 60%;
+                }
+            }
+            p{
+                font-size: 12px;
+                margin-bottom: 30px;
+                line-height: 1.8;
+                @include bp_pc(){
+                    font-size: 20px;
+                    text-align: left;
+                    line-height: 2;
+                    }
+            }
+            .plan-img{
+                max-width: 600px;
+                margin: 0 auto 30px;
+                @include bp_pc(){
+                    width: 50%;
+                    }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .plan-detail{
+                @include bp_pc(){    
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
+            dl{
+                width: 95%;
+                margin: 0 auto 20px;
+                display: flex;
+                flex-wrap: wrap;
+                font-size: 12px;
+                @include bp_pc(){    
+                    width: 40%;
+                    font-size: 14px;
+                }
+                dd{
+                    width: 50%;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #333;
+                }
+                dt{
+                    width: 50%;
+                    padding: 10px 0;
+                    border-bottom: 1px solid #333;
+                }
+            }
+            table{
+                width: 95%;
+                margin: 0 auto;
+                border: 1px solid #333;
+                @include bp_pc(){    
+                    width: 40%;
+                }
+                td, th{
+                    font-weight: 500;
+                    font-size: 14px;
+                    padding: 5px;
+                    border: 1px solid #333;
+                }
+            }
+        }
+    }
+}

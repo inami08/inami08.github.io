@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>翠風楼 | ご予約ページ</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="favicon.png" rel="icon" type="image/x-icon" />
+  <link rel="apple-touch-icon" sizes="192x192" href="touch_icon.png">
+</head>
+<body>
+
+  <div id="btn-wrapper">
+    <p id="timezone"></p>
+    <p id="dayzone"></p>
+    <p class="ham-menu">MENU</p>
+    <p id="ham-btn"><span></span></p>
+    </div><!-- /#btn-wrapper -->
+
+  <nav id="g-nav">
+    <a href="../index.html">
+      <div class="nav-logo">
+          <img src="../img/logo.svg" alt="翠風楼ロゴ">
+          <p><small>トップに戻る</small></p>
+      </div><!-- /.nav-logo -->
+    </a>
+    <div class="nav-wrapper">
+    <ul class="left">
+      <li><a href="../stay/index.html">ご宿泊</a></li>
+      <li><a href="../food/index.html">お食事</a></li>
+      <li><a href="../spa/index.html">温泉</a></li>
+      <li><a href="../reserve/index.html">ご予約</a></li>
+    </ul><!-- /.left -->
+    <ul class="right">
+      <li><a href="../index.html#access">アクセス</a></li>
+      <li><a href="../index.html#contact">お問い合わせ</a></li>
+      <li><a href="#sudomari">素泊まりプラン</a></li>
+      <li><a href="#standard">スタンダードプラン</a></li>
+      <li><a href="#premium">プレミアムプラン</a></li>
+    </ul><!-- /.right -->
+  </div><!-- /.nav-wrapper -->
+  </nav><!-- #g-nav -->
+
+
+  <div class="search-wrapper">
+    <h2>ご予約</h2>
+    <div class="search-bar">
+      <h3>空室検索</h3>
+    </div><!-- /.search-bar -->
+    <div class="search-box">
+      <form>
+      <dl class="restday">
+        <dt class="dt-restday">宿泊日</dt>
+        <div class="flex-wrapper">
+        <dd><input type="date" id="date" name="date" value=""></dd>
+        <dd><label for="decide">
+        <input id="decide" type="checkbox" name="decide">日付未定</label></dd>
+      </div><!-- /.flex-wrapper -->
+      </dl><!-- /.restday -->
+      <dl class="detaildata">
+        <dt>人数・泊数・部屋数</dt>
+        <div class="flex-wrapper">
+        <dd>
+          <select name="people" id="people">
+            <script>
+              for(var i =1; i<7;i++){
+                document.write('<option>'+i+'</option>');}
+            </script>
+          </select>名
+        </dd>
+        <dd>
+          <select name="" id="">
+            <script>
+              for(var i =1; i<4;i++){
+                document.write('<option>'+i+'</option>');}
+            </script>
+          </select>泊
+        </dd>
+        <dd>
+          <select name="" id="">
+            <script>
+              for(var i =1; i<4;i++){
+                document.write('<option>'+i+'</option>');}
+            </script>
+          </select>部屋
+        </dd>
+      </div><!-- /.flex-wrapper -->
+      </dl><!-- /.detaildata -->
+      <dl class="restamount">
+        <dt>1室もしくは1人あたりの1泊料金</dt>
+        <div class="flex-wrapper">
+        <dd>
+          <select name="" id="amount1">
+          <option>0</option>
+          <option>10,000</option>
+          <option>20,000</option>
+          <option>30,000</option>
+          <option>40,000</option>
+        </select>
+      </dd><span>～</span>
+      <dd>
+  <select name="" id="amount2">
+    <option>0</option>
+    <option>10,000</option>
+    <option>20,000</option>
+    <option>30,000</option>
+    <option>40,000</option>
+</select>
+</dd>
+</div><!-- /.flex-wrapper -->
+      </dl><!-- /.restamount -->
+      <dl class="foodselect">
+        <dt>食事</dt>
+        <div class="foodradio-wrapper">
+        <dd>
+        <label class="food_radio" for="ari">
+          <input type="radio" id="ari" name="food" value="有">有</label>
+        </dd>
+        <dd>
+        <label class="food_radio" for="nashi">
+          <input type="radio" id="nashi" name="food" value="無">無</label>
+        </dd>
+      </div><!-- /.foodradio-wrapper -->
+      </dl><!-- /.foodselect -->
+      <button type="button">この条件で空室状況を表示</button>
+      </form>
+    </div><!-- /.search-box -->
+  </div><!-- /.search-wrapper -->
+  
+  <div class="plan-wrapper">
+    <h2>▼ プラン一覧</h2>
+
+<div id="sudomari">
+  <div class="plan-list">
+    <div class="plan-bar">
+      <h3>【素泊まり】 自然美に浸る、癒しの宿泊プラン 【食事無し】</h3>
+    </div><!-- /.plan-bar -->
+    <div class="plan-content">
+      <div class="plan-txtpic">
+        <div class="plan-txt">
+    <p>食事なしの素泊まりプランです。<br>
+      観光地でのお食事やアクティビティなどを満喫するお客様におすすめです。</p>
+    </div><!-- /.plan-txt -->
+      <div class="plan-img">
+        <img src="../img/reserve/reserve1.jpg" alt="素泊まりプランイメージ">
+      </div><!-- /.plan-img -->
+    </div><!-- /.plan-txtpic -->
+    <div class="plan-detail">
+      <dl>
+        <dt>チェックイン</dt>
+        <dd>15時00分～21時00分</dd>
+        <dt>チェックアウト</dt>
+        <dd>10時00分</dd>
+        <dt>お食事</dt>
+        <dd>朝食・夕食なし</dd>
+        <dt>料金</dt>
+        <dd>12,000円～(税抜)※1室1名様あたり</dd>
+        <dt>キャンセル規定</dt>
+        <dd>当日:100%/3日前:50%</dd>
+      </dl>
+      <table>
+        <tr>
+          <th>部屋タイプ</th><th>料金(税抜)</th>
+        </tr>
+        <tr>
+          <th>旭</th><th>12,000円</th>
+        </tr>
+        <tr>
+          <th>月光</th><th>16,000円</th>
+        </tr>
+        <tr>
+          <th>桜見</th><th>21,000円</th>
+        </tr>
+      </table>
+    </div><!-- /.plan-detail -->
+    </div><!-- /.plan-content -->
+  </div><!-- /.plan-list -->
+</div><!-- /#sudomari -->
+
+
+<div id="standard">
+  <div class="plan-list">
+    <div class="plan-bar">
+      <h3>【スタンダードプラン】 癒しと美食を楽しむ、上質な宿泊プラン 【1泊2食付】</h3>
+    </div><!-- /.plan-bar -->
+    <div class="plan-content">
+      <div class="plan-txtpic">
+        <div class="plan-txt">
+    <p>お食事付きのスタンダードプランです。<br>
+      四季折々の味覚や美しい景観を存分にご堪能いただけます。</p>
+    </div><!-- /.plan-txt -->
+      <div class="plan-img">
+        <img src="../img/reserve/reserve2.jpg" alt="スタンダードプランイメージ">
+      </div><!-- /.plan-img -->
+    </div><!-- /.plan-txtpic -->
+    <div class="plan-detail">
+      <dl>
+        <dt>チェックイン</dt>
+        <dd>15時00分～21時00分</dd>
+        <dt>チェックアウト</dt>
+        <dd>10時00分</dd>
+        <dt>お食事</dt>
+        <dd>朝食・夕食付き</dd>
+        <dt>料金</dt>
+        <dd>18,000円～(税抜)※1室1名様あたり</dd>
+        <dt>キャンセル規定</dt>
+        <dd>当日:100%/3日前:50%</dd>
+      </dl>
+      <table>
+        <tr>
+          <th>部屋タイプ</th><th>料金(税抜)</th>
+        </tr>
+        <tr>
+          <th>旭</th><th>18,000円</th>
+        </tr>
+        <tr>
+          <th>月光</th><th>22,000円</th>
+        </tr>
+        <tr>
+          <th>桜見</th><th>27,000円</th>
+        </tr>
+      </table>
+    </div><!-- /.plan-detail -->
+    </div><!-- /.plan-content -->
+  </div><!-- /.plan-list -->
+</div><!-- /#standard -->
+
+
+<div id="premium">
+  <div class="plan-list">
+    <div class="plan-bar">
+      <h3>【プレミアムプラン】 特別なひとときを過ごす、極上の宿泊プラン 【1泊2食付】</h3>
+    </div><!-- /.plan-bar -->
+    <div class="plan-content">
+      <div class="plan-txtpic">
+        <div class="plan-txt">
+    <p>季節限定のサービスが付いたプレミアムプランです。<br>
+      当館での特別なひとときを楽しみたいお客様におすすめのプランとなっております。</p>
+    </div><!-- /.plan-txt -->
+      <div class="plan-img">
+        <img src="../img/reserve/reserve3.jpg" alt="プレミアムプランイメージ">
+      </div><!-- /.plan-img -->
+    </div><!-- /.plan-txtpic -->
+      <div class="plan-detail">
+      <dl>
+        <dt>チェックイン</dt>
+        <dd>15時00分～21時00分</dd>
+        <dt>チェックアウト</dt>
+        <dd>10時00分</dd>
+        <dt>お食事</dt>
+        <dd>朝食・夕食付き</dd>
+        <dt>料金</dt>
+        <dd>23,000円～(税抜)※1室1名様あたり</dd>
+        <dt>キャンセル規定</dt>
+        <dd>当日:100%/3日前:50%</dd>
+      </dl>
+      <table>
+        <tr>
+          <th>部屋タイプ</th><th>料金(税抜)</th>
+        </tr>
+        <tr>
+          <th>旭</th><th>23,000円</th>
+        </tr>
+        <tr>
+          <th>月光</th><th>27,000円</th>
+        </tr>
+        <tr>
+          <th>桜見</th><th>32,000円</th>
+        </tr>
+      </table>
+    </div><!-- /.plan-detail -->
+  </div><!-- /.plan-list -->
+</div><!-- /.plan-content -->
+</div><!-- /#premium -->
+</div><!-- /.plan-wrapper -->
+
+
+<footer>
+  <ul class="f-nav">
+      <li class="footer-logo"><img src="../img/logo.svg" alt="伊豆 翠風楼"></li>
+      <li>〒410-1234 静岡県伊豆市松原町1-2-3</li>
+      <li>Tell:0000-11-2222<br>(対応時間: 9:00 ～ 18:30)</li>
+  </ul>
+  <small><a href="../policy/index.html" target="_blank">プライバシーポリシー</a></small>
+  <p><small>&copy;2023 翠風楼</small></p>
+  </footer>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js' integrity='sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==' crossorigin='anonymous'></script>
+<script src="../js/script.js"></script>
+</body>
+</html>

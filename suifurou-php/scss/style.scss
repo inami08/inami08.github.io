@@ -1,0 +1,701 @@
+@use "reset";
+@use "common";
+@use "stay";
+@use "foodspa";
+@use "reserve";
+@use "form";
+@use "policy";
+
+$point_1:430px;
+$point_2:550px;
+$point_3:768px;
+$point_4:1050px;
+
+$font_sp_h2:16px;
+$font_sp_h3:20px;
+$font_sp_p:14px;
+
+$font_pc_h2:20px;
+$font_pc_h3:28px;
+$font_pc_p:18px;
+
+$color_1: #C7D4B6;
+$color_2: #845cb1;
+$color_3: #38B48B;
+$color_4: #52433D;
+$color_5: #DCDCDC;
+$color_txt: #333333;
+
+@mixin bp_sp{
+@media (min-width:$point_1){
+@content;
+}}
+@mixin bp_tab1{
+@media (min-width:$point_2){
+@content;
+}}
+@mixin bp_tab2{
+@media (min-width:$point_3){
+@content;
+}}
+@mixin bp_pc{
+@media (min-width:$point_4){
+@content;
+}}
+
+
+
+////////////////////about_section////////////////////
+
+#about{
+margin-top: 80px;
+margin-bottom: 100px;
+padding: 0 40px;
+  h2{
+    width: 120px;
+    margin: 0 auto 30px;
+    font-size: $font_sp_h2;
+    border-bottom: 1px solid #333;
+    @include bp_pc(){
+      width: 150px;
+      padding-bottom: 5px;
+      font-size: $font_pc_h2;
+      margin-bottom: 60px;
+            }
+  }
+  .about-img{
+    margin: 0 auto 30px;
+    max-width: 600px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+}
+@include bp_pc(){
+    max-width: 1440px;
+    margin: 120px auto 150px;
+    .about-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 100px 0 0;
+            .about-txt{
+                text-align: left;
+                max-width: 500px;
+                margin-left: 30px;
+            }
+    }
+}
+    h3{
+        font-size: $font_sp_h3;
+        margin-bottom: 20px;
+        @include bp_pc(){
+          margin-bottom: 50px;
+            font-size: $font_pc_h3;
+                }
+    }
+    p{
+        line-height: 1.8;
+        font-size: $font_sp_p;
+        @include bp_pc(){
+            font-size: $font_pc_p;
+            line-height: 2.3;
+                }
+    }
+}
+////////////////////about_section////////////////////
+
+
+////////////////////stay_section////////////////////
+#stay{
+margin-bottom: 100px;
+@include bp_pc(){
+    max-width: 1140px;
+    margin: 0 auto 550px;
+        }
+    h2{
+        width: 80px;
+        margin: 0 auto 40px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+        @include bp_pc(){
+            font-size: $font_pc_h2;
+            margin-bottom: 60px;
+                }
+    }
+    .stay-txt{
+        padding: 0 40px;
+        p{
+            line-height: 2.5;
+            font-size: $font_sp_p;
+            @include bp_pc(){
+                font-size: $font_pc_p;
+                line-height: 3;
+                    }
+        }
+    }
+    .room-wrapper{
+         display: flex;
+         height: 300px;
+         @include bp_pc(){
+            display: block;
+            height: 200px;
+                }
+            a{
+                transition: 0.3s;
+                .room-box{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    &:hover{
+                      box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1) ;
+                      border-color: transparent;
+                      }
+                    .room-name{
+                        width: 50px;
+                        height: 160px;
+                        background-color: $color_2;
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        margin: auto;
+                        @include bp_pc(){
+                            width: 100px;
+                                }
+                                h3{
+                                    writing-mode: vertical-rl;
+                                    padding: 20px 10px;
+                                    font-size: $font_sp_h3;
+                                    color: #fff;
+                                    @include bp_pc(){
+                                      font-size: 24px;
+                                      padding: 25px 35px 0;
+                                            }
+                                }
+                            }
+                        .room-photo{
+                            width: 100%;
+                            height: 100%;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                        }
+                        }
+                            }
+                &:hover{
+                    opacity: 0.7;
+                    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1) ;
+                    border-color: transparent;
+                    }
+            }
+           }
+}
+////////////////////stay_section////////////////////
+
+
+
+
+////////////////////food_section////////////////////
+#food{
+    margin-bottom: 100px;
+    padding: 0 40px;
+    @include bp_pc(){
+        max-width: 1440px;
+        margin: 0 auto 150px;
+    }    
+    h2{
+        width: 80px;
+        margin: 0 auto 30px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+        @include bp_pc(){
+            font-size: $font_pc_h2;
+            margin-bottom: 60px;
+                }
+    }
+    .food-content{
+        @include bp_pc(){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px 0 0;
+        }
+        .food-photo{
+            margin: 0 auto 40px;
+            max-width: 600px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .food-txt{
+            max-width: 600px;
+            margin: 0 auto;
+            @include bp_pc(){
+                text-align: left;
+                margin-left: 30px;
+            }
+            h3{
+                font-size: $font_sp_h3;
+                margin-bottom: 30px;
+                @include bp_pc(){
+                    font-size: $font_pc_h3;
+                    margin-bottom: 40px;
+                        }
+            }
+            p{
+                margin-bottom: 30px;
+                line-height: 2;
+                font-size: $font_sp_p;
+                @include bp_pc(){
+                    font-size: $font_pc_p;
+                    margin-bottom: 40px;
+                    line-height: 2.5;
+                        }
+            }
+            a{
+              padding: 0 0 5px 10px;
+                font-size: $font_sp_h3;
+                font-weight: 600;
+                border-bottom: 1px solid #333;
+                color: $color_txt;
+                transition: 0.2s;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }    
+        }
+    }
+    }
+////////////////////food_section////////////////////
+
+
+////////////////////spa_section////////////////////
+#spa{
+    margin-bottom: 100px;
+    padding: 0 40px;
+    @include bp_pc(){
+        max-width: 1440px;
+        margin: 0 auto 150px;
+        .spa-content.reverse{
+            flex-direction: row-reverse;
+        }
+    }  
+    h2{
+        width: 80px;
+        margin: 0 auto 30px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+        @include bp_pc(){
+            font-size: $font_pc_h2;
+            margin-bottom: 60px;
+                }
+    }
+    .spa-content{
+        @include bp_pc{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .spa-photo{
+            max-width: 600px;
+            margin: 0 auto 30px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+        }
+        .spa-txt{
+            max-width: 600px;
+            margin: 0 auto;
+            @include bp_pc{
+                text-align: left;
+                margin-right: 30px;
+            }
+            h3{
+                font-size: $font_sp_h3;
+                margin-bottom: 30px;
+                @include bp_pc(){
+                    font-size: $font_pc_h3;
+                    margin-bottom: 40px;
+                        }
+            }
+            p{
+                margin-bottom: 30px;
+                line-height: 2;
+                font-size: $font_sp_p;
+                @include bp_pc(){
+                    font-size: $font_pc_p;
+                    line-height: 2.5;
+                    margin-bottom: 40px;
+                        }
+            }
+            a{
+                padding: 0 0 5px 10px;
+                font-size: $font_sp_h3;
+                font-weight: 600;
+                border-bottom: 1px solid #333;
+                color: $color_txt;
+                transition: 0.2s;
+                &:hover{
+                    opacity: 0.5;
+                }
+            }    
+        }
+    }
+    }
+////////////////////spa_section////////////////////
+
+
+////////////////////news_section////////////////////
+#news{
+    padding: 0 30px;
+    margin-bottom: 100px;
+    @include bp_pc(){
+        margin-bottom: 130px;
+            }
+        h2{
+        width: 80px;
+        margin: 0 auto 30px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+            @include bp_pc(){
+                font-size: $font_pc_h2;
+                margin-bottom: 60px;
+                    }
+            }
+         #news-list{
+                font-size: $font_sp_p;
+                flex-wrap: wrap;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                border: 1px solid $color_txt;
+                    dt{
+                        width: 100%;
+                        background-color: $color_4;
+                        color: #fff;
+                        padding: 5px 0;
+                        border-bottom: 1px solid $color_txt;
+                        @include bp_tab2(){
+                            width: 30%;
+                            height: 100px;
+                            line-height: 100px;
+                        }
+                    }
+                    dd{
+                        width: 100%;
+                        background-color: #fff;
+                        padding: 15px;
+                        border-bottom: 1px solid $color_txt;
+                        @include bp_tab2(){
+                        width: 70%;
+                        height: 100px;
+                        line-height: 35px;
+                        text-align: left;
+                                }
+                    }
+                @include bp_pc(){
+                    max-width: 1260px;
+                    margin: 0 auto;
+                    font-size: $font_pc_p;
+                        }
+                dd:last-of-type{
+                    border-bottom: none;
+                }
+                dt:last-of-type{
+                    border-bottom: none;
+                }
+
+                   }
+}
+////////////////////news_section////////////////////
+
+
+////////////////////garelly_section////////////////////
+#gallery{
+    margin-bottom: 100px;
+    @include bp_pc(){
+        max-width: 1440px;
+        margin: 0 auto 150px;
+        padding: 0 100px;
+            }
+    h2{
+        width: 90px;
+        margin: 0 auto 30px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+        @include bp_pc(){
+           width: 120px;
+            font-size: $font_pc_h2;
+            margin-bottom: 50px;
+                }
+    }
+    p{
+        padding: 0 20px;
+        font-size: $font_sp_p;
+        margin-bottom: 30px;
+        @include bp_pc(){
+            font-size: $font_pc_p;
+            margin-bottom: 60px;
+                }
+    }
+    .gallery-slide{
+        width: 100%;
+        height: 200px;
+        @include bp_tab2(){
+            height: 300px;
+        }
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+      }
+    }
+}
+////////////////////garelly_section////////////////////
+
+
+
+////////////////////access_section////////////////////
+#access{
+    margin-bottom: 100px;
+    @include bp_pc(){
+        max-width: 960px;
+        margin: 0 auto 120px;
+            }
+    h2{
+        font-size: $font_sp_h2;
+        width: 80px;
+        margin: 0 auto 30px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+        @include bp_pc(){
+            font-size: $font_pc_h2;
+            margin-bottom: 60px;
+                }    
+    }
+    .map-wrapper{
+        height: 250px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        @include bp_pc(){
+            max-width: 1140px;
+            height: 500px;
+            margin-bottom: 60px;
+                }   
+    }
+    .g-map{
+        width: 100%;
+        height: 100%;
+    }
+    address{
+        font-size: $font_sp_h2;
+        font-style: normal;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        @include bp_pc(){
+            line-height: 2;
+            font-size: $font_pc_h2;
+            margin-bottom: 60px;
+                }
+    }
+    .access-car{
+        padding: 0 20px;
+        h2{
+            width: 150px;
+            margin-bottom: 20px;
+            @include bp_pc(){
+              width: 200px;
+              margin-bottom: 40px;
+                  }
+        }
+        p{
+            font-size: $font_sp_p;
+            margin-bottom: 50px;
+            line-height: 2;
+            @include bp_pc(){
+                font-size: $font_pc_p;
+                line-height: 2.3;
+                margin-bottom: 60px;
+                    }
+        }
+    }
+    .access-train{
+        padding: 0 20px;
+        h2{
+            width: 220px;
+            margin-bottom: 20px;
+            @include bp_pc(){
+              width: 280px;
+              padding-bottom: 5px;
+              margin-bottom: 40px;
+                  }
+        }
+        p{
+            font-size: $font_sp_p;
+            margin-bottom: 20px;
+            line-height: 2;
+            @include bp_pc(){
+                font-size: $font_pc_p;
+                line-height: 2.3;
+                    }
+        }
+    }
+}
+////////////////////access_section////////////////////
+
+
+////////////////////contact_section////////////////////
+#contact{
+    margin-bottom: 100px;
+    @include bp_tab1(){
+        margin: 100px auto 200px;
+            }
+    h2{
+        font-size: $font_sp_h2;
+        width: 110px;
+        margin: 0 auto 30px;
+        font-size: $font_sp_h2;
+        border-bottom: 1px solid #333;
+        @include bp_tab1(){
+            width: 150px;
+            padding-bottom: 5px;
+            font-size: $font_pc_h2;
+            margin-bottom: 40px;
+                }
+    }
+    p{
+        padding: 0 40px;
+        margin-bottom: 30px;
+        line-height: 1.8;
+        font-size: $font_sp_p;
+        @include bp_tab1(){
+            font-size: $font_pc_p;
+            margin-bottom: 40px;
+                }
+    }
+    form{
+        background-color: $color_5;
+        h2{
+            padding-top: 30px;
+            width: 200px;
+            border-bottom: none;
+            @include bp_tab1(){
+                padding-top: 60px;
+                    }
+        }
+        .form-list{
+            width: 375px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 40px;
+            @include bp_tab1(){
+                width: 500px;
+                    }
+            dt{
+                margin-bottom: 8px;
+                font-size: $font_sp_p;
+                @include bp_tab1(){
+                    font-size: $font_pc_p;
+                        }
+                span{
+                    margin-left: 8px;
+                    font-size: 14px;
+                }
+                .require{
+                    color: #ff0000;
+                }
+            }
+            dd{
+                margin-bottom: 14px;
+                p{
+                    padding-left: 0;
+                }
+                .input-txt{
+                    width: 300px;
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    @include bp_tab1(){
+                        width: 400px;
+                            }
+                    @include bp_pc(){
+                        height: 40px;
+                    }                
+                }
+                label{
+                    display: block;
+                    font-size: 12px;
+                    height: 20px;
+                    margin-bottom: 8px;
+                    @include bp_tab1(){
+                        font-size: 14px;
+                            }
+                }
+                textarea {
+                    width: 300px;
+                    height: 150px;
+                    border: 1px solid #000;
+                    background-color: #fff;
+                    @include bp_tab1(){
+                        width: 400px;
+                            }
+                    @include bp_pc(){
+                        height: 250px;
+                    } 
+                }
+            }
+        }
+        p{
+            width: 340px;
+            margin: 0 auto 30px;
+            font-size: 14px;
+            @include bp_tab1(){
+                font-size: $font_pc_h2;
+                width: 450px;
+                margin-top: 30px;
+                margin-bottom: 50px;
+                    }
+            #policy-checkbox{
+                margin-right: 10px;
+            }
+            a{
+                display: inline-block;
+                margin-right: 5px;
+                color: #000;
+                font-weight: 600;
+                border-bottom: 1px solid #000;
+                transition: 0.3s;
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+        }
+        .submit-button{
+            margin: 20px 0 40px;
+            padding: 15px 80px;
+            background-color: $color_3;
+            color: #fff;
+            transition: 0.3s;
+            &:hover{
+                box-shadow: 0 1px 10px rgba(0, 0, 0, 0.4), 0 0 50px rgba(128, 128, 128, 0.1) ;
+                border-color: transparent;
+                opacity: 0.6;
+            }
+            @include bp_tab1(){
+                padding: 30px 130px;
+                margin-bottom: 80px;
+                font-size: $font_pc_h2;
+                    }
+        }
+    }
+}
+
+////////////////////contact_section////////////////////
+
+
+
